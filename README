@@ -1,1 +1,7 @@
-使い方がよくわからない。以上。
+<?php
+require_once('function.php');
+echo translation('ro-majidayo-n'); //ろーまじだよーん
+?>
+みたいな感じです。簡単です。
+うまく変換できないとか発見したらForkとかお願いします。・・・Forkでいいのかな？
+Githubを使うのはこれが初めてなので、よくわからないです＾＾；
