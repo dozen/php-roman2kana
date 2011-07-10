@@ -85,12 +85,15 @@ function translation($translation){
     return str_ireplace($roman_lib,$kana_lib,$translation);
 }
 
-function ime($word){
-    $word = urlencode($word);
-    $google = file_get_contents("http://www.google.com/transliterate?langpair=ja-Hira|ja&text={$word}");
-    $word = json_decode($google);
-    foreach ($word as $status){
-        $line .= $status['1']['0'];
+function ime($translation,$type){
+    if ($type != 'H'){
+        $translation = roman2kana($translation);
+    }
+    $translation = urlencode($translation);
+    $translation = file_get_contents("http://www.google.com/transliterate?langpair=ja-Hira|ja&text={$translation}");
+    $translation = json_decode($translation);
+    foreach ($translation as $status){
+    $line .= $status['1']['0'];
     }
     return $line;
 }
