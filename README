@@ -2,6 +2,17 @@
 require_once('function.php');
 echo translation('ro-majidayo-n'); //ろーまじだよーん
 ?>
-みたいな感じです。簡単です。
-うまく変換できないとか発見したらForkとかお願いします。・・・Forkでいいのかな？
-Githubを使うのはこれが初めてなので、よくわからないです＾＾；
+簡単です。
+
+ime関数はGoogle CGI API for Japanese Inputを使って勝手に変換をしてくれる簡易IMEみたいな機能です。適当です。
+ローマ字をime関数に投げる場合は第2引数は使いません（''とでもしておいてください）が、ひらがなを入力する場合はHを入れてください。
+
+<?php
+require_once('function.php');
+
+//ひらがなの場合
+echo ime('ぼくはとんでもないぎーくです','H'); //僕はとんでもないギークです
+
+//ローマ字の場合
+echo ime('bokuhatondemonaigi-kudesu',''); //僕はとんでもないギークです
+?>
