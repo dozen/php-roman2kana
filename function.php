@@ -1,5 +1,5 @@
 <?php
-function translation($translation){
+function roman2kana($translation){
     $roman_lib = array(
         'BB','CC','DD','FF','GG','HH','JJ','KK','LL','MM','NN','PP','QQ','RR','SS','TT','VV','WW','XX','YY','ZZ',
         'KA','KI','KU','KE','KO',
