@@ -84,17 +84,3 @@ function translation($translation){
     );
     return str_ireplace($roman_lib,$kana_lib,$translation);
 }
-
-function ime($translation,$type){
-    if ($type != 'H'){
-        $translation = roman2kana($translation);
-    }
-    $translation = urlencode($translation);
-    $translation = file_get_contents("http://www.google.com/transliterate?langpair=ja-Hira|ja&text={$translation}");
-    $translation = json_decode($translation);
-    foreach ($translation as $status){
-    $line .= $status['1']['0'];
-    }
-    return $line;
-}
-?>
