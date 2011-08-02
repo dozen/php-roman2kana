@@ -2,7 +2,7 @@
 難しいことではないのですが、変換の順番とかいろいろあって、一から作るのは面倒臭いかなと思って公開しました。使い方も至って簡単です。
 
 コード
-echo translation('ro-majidayo-n'); 
+echo roman2kana('ro-majidayo-n'); 
 
 結果
 ろーまじだよーん
