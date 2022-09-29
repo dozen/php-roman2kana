@@ -6,8 +6,8 @@ roman2kana is a library that converts strings composed of Roman character to Jap
 
 ```php
 
-require 'autoload.php';
+require 'vendor/autoload.php';
 
-echo Dozen\Roman2Kana::convert("ro-majidayo-nn."); #=> ろーまじだよーん
+echo Dozen\Roman2Kana::convert("ro-majidayo-nn."); #=> ろーまじだよーん.
 
 ```
