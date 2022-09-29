@@ -1,0 +1,22 @@
+{
+  "name": "dozen/php-roman2kana",
+  "description": "Roman character convert to Japanese Kana.",
+  "homepage": "https://github.com/dozen/php-roman2kana",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "dozen",
+      "email": "me@jetzou.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.3"
+  },
+  "autoload": {
+    "psr-4": {"Dozen\\": "src"}
+  },
+  "config": {
+    "disable-tls": false
+  }
+}

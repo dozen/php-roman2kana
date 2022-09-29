@@ -1,6 +1,10 @@
 <?php
-function roman2kana($translation){
-    $roman_lib = array(
+
+namespace Dozen;
+
+class Roman2Kana {
+
+    private static $roman_table = array(
         'BB','CC','DD','FF','GG','HH','JJ','KK','LL','MM','NN','PP','QQ','RR','SS','TT','VV','WW','XX','YY','ZZ',
         'KA','KI','KU','KE','KO',
         'GA','GI','GU','GE','GO',
@@ -40,8 +44,9 @@ function roman2kana($translation){
         'FA','FI','FU','FE','FO',
         'QA','QI','QU','QE','QO',
         'A','I','U','E','O','N','-'
-     );
-    $kana_lib = array(
+    );
+
+    private static $kana_table = array(
         'っB','っC','っD','っF','っG','っH','っJ','っK','っL','っM','ん','っP','っQ','っR','っS','っT','っV','っW','っX','っY','っZ',
         'か','き','く','け','こ',
         'が','ぎ','ぐ','げ','ご',
@@ -81,6 +86,9 @@ function roman2kana($translation){
         'ふぁ','ふぃ','ふ','ふぇ','ふぉ',
         'くぁ','くぃ','く','くぇ','くぉ',
         'あ','い','う','え','お','ん','ー'
-    );
-    return str_ireplace($roman_lib,$kana_lib,$translation);
+    );   
+
+    static function convert($input) {
+        return str_ireplace(self::$roman_table, self::$kana_table, $input);
+    }
 }
